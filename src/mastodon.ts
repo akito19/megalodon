@@ -162,7 +162,7 @@ export default class Mastodon {
     baseUrl = DEFAULT_URL,
     redirect_uri = NO_REDIRECT
   ): Promise<OAuth.TokenData> {
-    return this._post('/oauth/token', {
+    return this.get('/oauth/token', {
       client_id,
       client_secret,
       code,
